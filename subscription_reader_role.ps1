@@ -1,6 +1,6 @@
 $app = Get-AzADApplication -DisplayName rmcguinetestaccount
 $appId = $app.ApplicationId
-$subs = Get-AzSubscriptiom
+$subs = Get-AzSubscription
 foreach ($sub in $subs) {
   $sub_scope = "/subscriptions/" + $sub.Id
   $assignedRoles = Get-AzRoleAssignment -Scope $sub_scope -SPN $appId
