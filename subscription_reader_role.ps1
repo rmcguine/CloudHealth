@@ -1,4 +1,4 @@
-$app = Get-AzADApplication -DisplayName rmcguinetestaccount
+$app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
 $appId = $app.ApplicationId
 $subs = Get-AzSubscription
 foreach ($sub in $subs) {
