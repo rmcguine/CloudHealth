@@ -1,6 +1,6 @@
 # Download Az.Reservations package if you don't already have it -> https://www.powershellgallery.com/packages/Az.Reservations/0.9.0
 
-$app = Get-AzADApplication -DisplayName rmcguinetestaccount
+$app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
 $appId = $app.ApplicationId
 $reservationOrders = Get-AzReservationOrder
 
