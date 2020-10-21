@@ -30,6 +30,7 @@ foreach ($sub in $subs) {
 New-AzRoleDefinition -Role $role
 
 #Assignment Script
+#Customer to manually enter $client_id
 
 $subs = Get-AzSubscription
 $client_id = '<MANUALLY_ENTER_APPLICATION_CLIENT_ID>'
