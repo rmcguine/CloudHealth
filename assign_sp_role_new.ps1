@@ -37,5 +37,5 @@ $client_id = '<MANUALLY_ENTER_APPLICATION_CLIENT_ID>'
 $sp = Get-AzADServicePrincipal -SPN $client_id
 foreach ($sub in $subs) {
 	$sub_scope = '/subscriptions/' + $sub.Id
-	New-AzRoleAssignment -ObjectId $sp.Id -RoleDefinitionName CHTActions -Scope 	$sub_scope
+	New-AzRoleAssignment -ObjectId $sp.Id -RoleDefinitionName CHTActions -Scope $sub_scope
 }
