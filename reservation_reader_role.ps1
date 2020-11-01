@@ -4,18 +4,24 @@ $app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
 $appId = $app.ApplicationId
 $reservationOrders = Get-AzReservationOrder
 
-foreach ($reservation in $reservationOrders) {
-  $order_scope = $reservation.Id
-  $assignedRoles = Get-AzRoleAssignment -Scope $order_scope -SPN $appId
-  if (!$assignedRoles) {
-    New-AzRoleAssignment -Scope $order_scope -RoleDefinitionName "Reader" -ApplicationId $appId
-    Write-Host($order_scope + " successfully added Reader role")
+if (!reservationOrders) {
+    Write-Host("No Reservation Orders Found")
+    Return
     }
-  elseif ($assignedRoles.RoleDefinitionName.Contains('Reader')) {
-    Write-Host($order_scope + " has Reader role enabled already")
-    }
-  else {
-    New-AzRoleAssignment -Scope $order_scope -RoleDefinitionName "Reader" -ApplicationId $appId
-    Write-Host($order_scope + " successfully added Reader role")
-    }
- }
+else {
+    foreach ($reservation in $reservationOrders) {
+      $order_scope = $reservation.Id
+      $assignedRoles = Get-AzRoleAssignment -Scope $order_scope -SPN $appId
+      if (!$assignedRoles) {
+        New-AzRoleAssignment -Scope $order_scope -RoleDefinitionName "Reader" -ApplicationId $appId
+        Write-Host($order_scope + " successfully added Reader role")
+        }
+      elseif ($assignedRoles.RoleDefinitionName.Contains('Reader')) {
+        Write-Host($order_scope + " has Reader role enabled already")
+        }
+      else {
+        New-AzRoleAssignment -Scope $order_scope -RoleDefinitionName "Reader" -ApplicationId $appId
+        Write-Host($order_scope + " successfully added Reader role")
+        }
+     }
+}
