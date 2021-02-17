@@ -1,7 +1,7 @@
 # Download Az.Reservations package if you don't already have it -> https://www.powershellgallery.com/packages/Az.Reservations/0.9.0
 # "Get-AzADApplication -DisplayName" will only grab Applications within the tenant user is logged in to. 
 
-$app = Get-AzADApplication -DisplayName <your_display_name>
+$app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
 $appId = $app.ApplicationId
 $reservationOrders = Get-AzReservationOrder
 
