@@ -1,3 +1,5 @@
+# Grabs all existing subscriptions in directory and assigns the reader role 
+
 $app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
 $appId = $app.ApplicationId
 $subs = Get-AzSubscription
