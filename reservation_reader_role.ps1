@@ -1,3 +1,4 @@
+# Grabs all existing Reservation Orders in directory and assigns the reader role 
 # Download Az.Reservations package if you don't already have it -> https://www.powershellgallery.com/packages/Az.Reservations/0.9.0
 # "Get-AzADApplication -DisplayName" will only grab Applications within the directory the user is logged in to in Azure
 
