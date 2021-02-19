@@ -1,4 +1,4 @@
-#Current CH script uses deprecating AzureRm commands; this script is updated to use Az for Az users. 
+#Current CH script for setting up Actions at SP level uses deprecating AzureRm commands; this script is updated to use Az for Az users. 
 #https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-4.8.0&viewFallbackFrom=azps-4.6.1#upgrade-to-az
 
 #Custom Role Script
