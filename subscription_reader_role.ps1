@@ -1,3 +1,4 @@
+# Azure Management Groups would be considered the best practice for subscription reader role assignment. However, not all Azure customers use AMG's.
 # Grabs all existing subscriptions in directory and assigns the reader role 
 
 $app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
