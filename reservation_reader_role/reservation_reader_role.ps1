@@ -4,7 +4,7 @@
 
 $cloudHealthAppDisplayName = Read-Host "Please enter your CloudHealth App Display Name"
 
-$app = Get-AzADApplication -DisplayName <CLOUDHEALTH-APP-DISPLAY-NAME>
+$app = Get-AzADApplication -DisplayName $cloudHealthAppDisplayName
 $appId = $app.ApplicationId
 $reservationOrders = Get-AzReservationOrder
 
