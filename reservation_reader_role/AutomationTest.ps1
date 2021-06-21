@@ -1,5 +1,5 @@
 # Variables to be set
-$cloudhealth_api_key = "f40dadfb-0fa6-4b8a-b9d4-921d345db0ca"
+$cloudhealth_api_key = "CLOUDHEALTH_API_KEY"
 
 # Call CloudHealth API for derived reservation orders
 $url = "https://chapi.cloudhealthtech.com/api/search?api_version=2&name=AzureReservationOrder&query=is_derived=false&api_key=$cloudhealth_api_key"
