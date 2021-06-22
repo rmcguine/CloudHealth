@@ -2,7 +2,7 @@
 $cloudhealth_api_key = "CLOUDHEALTH_API_KEY"
 
 # Call CloudHealth API for derived reservation orders
-$url = "https://chapi.cloudhealthtech.com/api/search?api_version=2&name=AzureReservationOrder&query=is_derived=false&api_key=$cloudhealth_api_key"
+$url = "https://chapi.cloudhealthtech.com/api/search?api_version=2&name=AzureReservationOrder&query=is_derived=true&api_key=$cloudhealth_api_key"
 $cloudhealthdata = Invoke-RestMethod $url
 
 # Assign reservation order ID's to a variable
