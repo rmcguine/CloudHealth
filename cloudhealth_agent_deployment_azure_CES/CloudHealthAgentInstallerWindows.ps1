@@ -1,6 +1,6 @@
 # Silent install CloudHealth Agent
 # https://help.cloudhealthtech.com/integrations/integrate-with-cht-agent
-# Be sure to update line 36 with your CloudHealth API key ("CHTAPIKEY = ....")
+# Be sure to update line 36 with your CloudHealth API key ("CHTAPIKEY=....")
 
 # Path for the workdir
 $workdir = "c:\installer\"
