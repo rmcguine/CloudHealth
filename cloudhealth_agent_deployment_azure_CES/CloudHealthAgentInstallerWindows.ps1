@@ -32,7 +32,7 @@ else {
 
 # Start the installation
 
-Start-Process -FilePath "$workdir\CloudHealthAgent.exe" -ArgumentList /S /v"/l* install.log /qn CLOUDNAME=azure CHTAPIKEY=b43ff4a4-e67f-40cc-9f49-cdf6a2eb8dea"
+Start-Process -FilePath "$workdir\CloudHealthAgent.exe" -ArgumentList /S /v"/l* install.log /qn CLOUDNAME=azure CHTAPIKEY=<INSERT_API_KEY>"
 
 # Wait XX seconds for the installation for finish
 
